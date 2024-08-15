@@ -1,0 +1,231 @@
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.5); 
+    background-image: url('https://fjvillatoro.wordpress.com/wp-content/uploads/2011/03/logo_umg_juvenil_peque.jpg?w=380'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-blend-mode: overlay; 
+    background-size: contain;
+    min-height: 100vh; /* Asegura que la página no sea más larga de lo necesario */
+    box-sizing: border-box;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+    position: relative;
+}
+
+/* Estilo del logo */
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Estilo del menú de navegación */
+.nav-menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-menu ul li {
+    margin: 0 10px;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el botón hamburguesa */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 600px) {
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #eee9e9;
+        border: 1px solid #141414;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Estilo para pantallas más grandes */
+@media (min-width: 601px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Estilo del contenido principal */
+main {
+    padding: 5px; 
+    text-align: center;
+}
+
+/* Estilo de las tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.card {
+    background-color: rgba(230, 233, 236, 0.884);
+    border: 1px solid #2e2d2d;
+    border-radius: 5px;
+    padding: 10px; 
+    margin: 5px;   
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33.33% - 20px);
+}
+
+.card img {
+    max-width: 40%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 600px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1025px) {
+    .card {
+        width: calc(33.33% - 20px);
+    }
+}
+
+/* Estilo del pie de página */
+footer {
+    padding: 2px; 
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1px;
+}
+
+.social-links a {
+    color: rgb(11, 109, 236);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.creator-info {
+    font-size: 0.9em;
+    color: #ccc;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.creator-info i {
+    color: #fefeff; 
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+.extra-info {
+    margin-top: 10px;
+    background-color: rgba(240, 240, 240, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
